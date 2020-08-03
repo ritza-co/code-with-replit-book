@@ -1,6 +1,6 @@
 # Introduction
 
-This book is built from a collection of tutorials written over several months. Each chapter is mainly independent so there is no need to follow the chapters in order: pick a project that you are excited about and get coding!
+This book consists of a collection of tutorials. Each chapter is mainly independent so there is no need to follow the chapters in order: pick a project that you are excited about and get coding!
 
 While independent, some chapters share topics. A summary of each chapter is given below.
 
