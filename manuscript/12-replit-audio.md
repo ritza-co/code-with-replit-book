@@ -238,3 +238,7 @@ The "Twinkle Twinkle Little Star" repl can be found at [https://repl.it/@GarethD
 Controlling your audio files through a text-based interface might feel like a downgrade from using a GUI media player, but you can use these concepts to integrate audio controls into your other applications. For example, you could create a [Discord chatbot](https://ritza.co/showcase/repl.it/building-a-discord-bot-with-python-and-repl-it.html) that plays different tracks and automatically pauses or reduces the volume of your music when you join a Discord voice channel. Or you could integrate audio tracks into a web application or game (e.g. playing a victory or defeat sound at a specific volume given certain conditions).
 
 Once you can control something using code, the possibilities are pretty broad, so use your imagination!
+
+You've reached the end of this collection of tutorials that teach you the ins and outs of Repl.it, and you should be able to build any project that you can imagine now.
+
+If you're stuck for ideas, continue on to Part 3 where we'll walk you through eight practical projects, focusing more on coding concepts than Repl.it features.
