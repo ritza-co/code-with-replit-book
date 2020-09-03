@@ -1,5 +1,7 @@
 # Productivity hacks
 
+**The images in this chapter are mostly .gif files, click [here](https://docs.repl.it/tutorials/10-productivity-hacks) to access the web version of this chapter** 
+
 After coding for a while, you may find that there are some repetitive things that take up unnecessary time. For example, searching for and updating a variable name can seem laborious. Luckily, Repl.it has some built-in productivity tools that we'll take a look at in this tutorial.
 
 Specifically, you'll see how to:
@@ -18,7 +20,7 @@ If you hit `Ctrl+K` (`Cmd+K` on MacOS) you'll see the following modal pop up, wh
 
 The keyboard shortcut indicated to the right of each option shows how to activate that option directly without opening up the global command palette, but once it's open you can type in a part of any of the options to activate that option. For example, in our weather project app, I can type `Cmd+K` and then type `fi` (start of `find`) and press `Enter` and then type `Lo` (start of `London.txt`) and press `Enter` again to quickly open the weather log for London.
 
-![**Image 2:** *Opening a file with the global command palette.*](https://codewithrepl.it/img/10-finding-file.gif)
+![**Image 2:** *Opening a file with the global command palette.*](resources/10-finding-file.png)
 
 Of course, with only six files it might be faster to reach for my mouse, but as the find searches through all files in all directories this method can be significantly faster for larger projects.
 
@@ -65,7 +67,7 @@ Instead of deleting the entire line, you can also delete from your cursor up to 
 * `Ctrl+Backspace` (`cmd+backspace` on MacOS) to delete backwards
 * `Ctrl+K` (same on MacOS) to delete forwards
 
-As an example, below you can see how we might use this to first delete one of the our `elif` blocks by doing two "delete line" operations. We then change our random speed to be constant by using a "delete to end of line" operation from the `=` sign and then typing our constant.
+As an example, below you can see how we might use this to first delete one of our `elif` blocks by doing two "delete line" operations. We then change our random speed to be constant by using a "delete to end of line" operation from the `=` sign and then typing our constant.
 
 ![**Image 5:** *Deleting selected lines of code.*](resources/10-deleting-lines.png)
 
