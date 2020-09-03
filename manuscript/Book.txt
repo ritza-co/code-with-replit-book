@@ -9,6 +9,8 @@
 08-storing-secrets-and-history.md
 09-test-driven-development.md
 10-productivity-hacks.md
+11-using-the-replit-database.md
+12-replit-audio.md
 13-beginner-web-scraping-with-python-and-repl-it.md
 14-building-news-word-clouds-using-python-and-repl-it.md
 15-building-a-discord-bot-with-python-and-repl-it.md
