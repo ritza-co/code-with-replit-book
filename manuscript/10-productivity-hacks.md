@@ -144,6 +144,6 @@ If you want to keep hacking on the PyGame project using your new keyboard prowes
 
 ## Where next?
 
-You've reached the end of this collection of tutorials that teach you the ins and outs of Repl.it, and you should be able to build any project that you can imagine now.
+Now that you have mastered the productivity features of Repl.it, you can build proof of concept applications in no time.
 
-If you're stuck for ideas, continue on to [Part 3](https://www.codewithrepl.it/#part-3) where we'll walk you through eight practical projects, focusing more on coding concepts than Repl.it features.
+In the next tutorial, we'll show you how to store data directly in the Repl.it key-value store, one of the simplest verieties of database. This will cover the so-called "CRUD" (Create, Read, Update, Delete) operations that are fundamental to any database-backed software.
