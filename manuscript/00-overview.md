@@ -58,6 +58,14 @@ By this stage you'll have made a few mistakes. Learn the TDD way and how to writ
 
 Have you seen the Matrix? Learn to be the Neo of coding by getting more than one cursor, using keyboard shortcuts, and all of the other productivity features that Repl.it offers. You'll be soon producing more code in less time.
 
+#### Tutorial 11: Keeping your data in check with the Repl.it database
+
+Now that you are starting to build larger and more complicated applications, it is time to start using databases to keep your data clean and secure.
+
+#### Tutorial 12: Dancing with Python
+
+This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
+
 ## Part 3: building your own projects
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
