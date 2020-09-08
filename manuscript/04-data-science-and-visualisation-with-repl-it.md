@@ -98,7 +98,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
 
-data_url = "https://raw.githubusercontent.com/sixhobbits/ritza/master/data/us-cities.txt"
+data_url = "https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv"
 
 r = requests.get(data_url)
 
