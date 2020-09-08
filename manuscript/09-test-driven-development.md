@@ -36,7 +36,7 @@ Splitting names is useful in many contexts. For example, it is a common requirem
 ```python
 def split_name(name):
     first_name, last_name = name.split()
-    return first_name, last_name
+    return [first_name, last_name]
 
 print(split_name("John Smith"))
 # >>> ["John", "Smith"]
@@ -95,7 +95,7 @@ Head over to the `utils/name_helper.py` file and add the following code.
 ```python
 def split_name(name):
     first_name, last_name = name.split()
-    return first_name, last_name
+    return [first_name, last_name]
 ```
 
 This is the very simple version we discussed earlier that can only handle two names, but it will solve the name error and TDD is all about small increments. Press `Run` to re-run the tests and you should see a far more friendly green output now, as below, indicating that all of our tests passed.
