@@ -127,7 +127,7 @@ If you run this code again, you should now be able to click on the ball (let it 
 
 ## Making the ball bounce off the edges and move randomly
 
-To simulate juggling, we want the ball to bounce of the "roof" (top edge of the screen) and "walls" (left and right edge). If the ball touches the "floor" (bottom edge) we want to kill it and remove it from the game as a dropped ball. 
+To simulate juggling, we want the ball to bounce off the "roof" (top edge of the screen) and "walls" (left and right edge). If the ball touches the "floor" (bottom edge) we want to kill it and remove it from the game as a dropped ball. 
 
 To achieve this, we'll add logic to our `update()` method (this is why we kept it separate from our `move()` method before). Add two lines of code to `update()` to make it look as follows. 
 

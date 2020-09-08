@@ -40,7 +40,7 @@ We have `API_KEY` defined near the top of `main.py`, and this is the value that 
 
 Click on the add file icon and call your new file `.env`. Be sure to add the initial full stop and don't add any spaces.
 
-![**Image 2:** Creating the `.env` file to store sensitive information.*](https://www.codewithrepl.it/img/08-adding-env.png)
+![**Image 2:** *Creating the `.env` file to store sensitive information.*](https://www.codewithrepl.it/img/08-adding-env.png)
 
 Now remove the API_KEY variable from the `main.py` file and add it to the `.env` file, removing all quotation marks (`"`) and spaces.
 
