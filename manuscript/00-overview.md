@@ -62,7 +62,9 @@ Have you seen the Matrix? Learn to be the Neo of coding by getting more than one
 
 Now that you are starting to build larger and more complicated applications, it is time to start using databases to keep your data clean and secure.
 
-#### Tutorial 12: Dancing with Python
+#### Tutorial 12: Repl audio - control (or create) your music with code
+
+Find, download, play, and control the volume of your music, all in code. If that's not enough, create your own music too.
 
 This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
 
@@ -93,4 +95,3 @@ Build a machine-learning based text classifier. We skip the maths but show how y
 
 #### Quicksort tutorial: Python implementation with line by line explanation
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.
-
