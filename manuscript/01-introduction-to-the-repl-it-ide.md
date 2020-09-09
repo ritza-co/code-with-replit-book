@@ -124,11 +124,11 @@ To understand this, compare the three versions of the same repl below.
 * As your friend would see it, a read-only version
 * As your friend would see it after forking it, on an anonymous account
 
-![**Image 8**: *The owner's view of a repl*](https://www.codewithrepl.it/img/01-ownrepl.png)
+![**Image 8**: *The owner's view of a repl*](resources/01-08-ownrepl.png)
 
-![**Image 9**: *A guest's 'read-only' view of a repl*](https://www.codewithrepl.it/img/01-readonly.png)
+![**Image 9**: *A guest's 'read-only' view of a repl*](resources/01-09-readonly.png)
 
-![**Image 10**: *An anonymous owner's view of a copy of a repl*](https://www.codewithrepl.it/img/01-anonymousclone.png)
+![**Image 10**: *An anonymous owner's view of a copy of a repl*](resources/01-09-anonymousfork.png)
 
 What does this mean? Because no one else can edit your repl, you can share it far and wide. But because anyone can _read_ your repl, you should be careful that you don't share anything private or secret in it.
 
