@@ -175,7 +175,7 @@ def get_contact(name):
     return number
 ```
 
-Our new code to go into `contact.py` is very simple and it might be tempting to just put this logic directly in the `main.py` file as it's so short. However it's good to stay consistent as each of the files is likely to grow in length and complexity over time, and it will be easier to maintain our codebase if our user interaction code is strictly separate from our database interaction code.
+Our new code to go into `contacts.py` is very simple and it might be tempting to just put this logic directly in the `main.py` file as it's so short. However it's good to stay consistent as each of the files is likely to grow in length and complexity over time, and it will be easier to maintain our codebase if our user interaction code is strictly separate from our database interaction code.
 
 Run the code again and input the same name as before. If all went well, you'll see the number, as in the example below.
 
