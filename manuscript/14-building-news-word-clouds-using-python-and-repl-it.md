@@ -218,7 +218,7 @@ Now it's time to move on to generating the actual word clouds.
 
 Once again, there's a nifty Python library that can help us. This one will take in text and return word clouds as images and is called `wordcloud`. 
 
-Images are usually served as files living on your server or from an image host like [imgur](imgur.com). Because we'll be creating small, short-lived images dynamically from the text, we'll simply keep them in memory instead of saving them anywhere permanently. In order to do this, we'll have to mess around a bit with the Python `io` and `base64` libraries, alongside our newly installed `wordcloud` library.
+Images are usually served as files living on your server or from an image host like [imgur](https://imgur.com/). Because we'll be creating small, short-lived images dynamically from the text, we'll simply keep them in memory instead of saving them anywhere permanently. In order to do this, we'll have to mess around a bit with the Python `io` and `base64` libraries, alongside our newly installed `wordcloud` library.
 
 To import all the new libraries, we'll be using to process images, modify the top of our `main.py` to look as follows. 
 
