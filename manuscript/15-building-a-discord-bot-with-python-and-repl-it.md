@@ -111,7 +111,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author != client.user:
-        await client.send_message(message.channel, message.content[::-1])
+        await message.channel.send(message.content[::-1])
 
 token = os.environ.get("DISCORD_BOT_SECRET")
 client.run(token)
@@ -123,7 +123,7 @@ Let's tear this apart line by line to see what it does.
 * In **line 4**, we create a Discord `Client`. This is a Python object that we'll use to send various commands to Discord's servers.
 * In **line 6**, we say we are defining an `event` for our client. This line is a Python decorator, which will take the function directly below it and modify it in some way. The Discord bot is going to run *asynchronously*, which might be a bit confusing if you're used to running standard Python. We won't go into asynchronous Python in depth here, but if you're interested in what this is and why it's used, there's a good guide over at [FreeCodeCamp](https://medium.freecodecamp.org/a-guide-to-asynchronous-programming-in-python-with-asyncio-232e2afa44f6). In short, instead of running the code in our file from top to bottom, we'll be running pieces of code in response to specific events.
 * In **lines 7-9** we define what kind of event we want to respond to, and what the response should be. In this case, we're saying that in response to the `on_ready` event (when our bot joins a server successfully), we should output some information server-side (i.e. this will be displayed in our Repl's output, but not sent as a message through to Discord). We'll print a simple `I'm in` message to see that the bot is there and print our bot's user id (if you're running multiple bots, this will make it easier to work out who's doing what).
-* **Lines 11-14** are similar, but instead of responding to an `on_ready` event, we tell our bot how to handle new messages. **Line 13** says we only want to respond to messages that aren't from us (otherwise our bot will keep responding to himself -- you can remove this line to see why that's a problem), and **line 15** says we'll send a new message to the same channel where we received a message (`message.channel`) and the content we'll send will be the same message that we received, but backwards (`message.content[::-1]` - `::-1` is a slightly odd but useful Python idiom to reverse a string or list).
+* **Lines 11-14** are similar, but instead of responding to an `on_ready` event, we tell our bot how to handle new messages. **Line 13** says we only want to respond to messages that aren't from us (otherwise our bot will keep responding to himself -- you can remove this line to see why that's a problem), and **line 14** says we'll send a new message to the same channel where we received a message (`message.channel`) and the content we'll send will be the same message that we received, but backwards (`message.content[::-1]` - `::-1` is a slightly odd but useful Python idiom to reverse a string or list).
 
 The last two lines get our secret token from the environment variables that we set up earlier and then tell our bot to start up.
 
@@ -195,7 +195,7 @@ Now your bot will stay alive even after closing your browser or shutting down yo
 ## Forking and extending our basic bot
 This is not a very useful bot as is, but the possibilities are only limited by your creativity now! You can have your bot receive input from a user, process the input, and respond in any way you choose. In fact, with the basic input and output that we've demonstrated, we have most of the components of any modern computer, all of which are based on the [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) (we could easily add the missing memory by having our bot write to a file, or with a bit more effort link in a [SQLite database](https://www.sqlite.org/index.html) for persistent storage).
 
-If you followed along with this tutorial, you'll have your own basic Repl bot to play around with and extend. If you were simply reading, you can this bot at [https://repl.it/@GarethDwyer1/discord-bot](https://repl.it/@GarethDwyer1/discord-bot) and extend it how you want (you'll need to add your own token and recreate the `.env` file still). Happy hacking!
+If you followed along with this tutorial, you'll have your own basic Repl bot to play around with and extend. If you were simply reading, you can easily fork this bot at [https://repl.it/@GarethDwyer1/discord-bot](https://repl.it/@GarethDwyer1/discord-bot) and extend it how you want (you'll need to add your own token and recreate the `.env` file still). Happy hacking!
 
 If you're stuck for ideas, why not link up your Discord bot to the [Twitch API](https://dev.twitch.tv/) to get notified when your favourite streamers are online, or build a [text adventure](https://en.wikipedia.org/wiki/Interactive_fiction).
 

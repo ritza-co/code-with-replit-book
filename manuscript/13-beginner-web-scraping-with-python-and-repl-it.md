@@ -40,13 +40,13 @@ Websites are created through a combination of three computer languages: HTML, CS
 
 This is shown in the image below: a normal web page on the left, with an open menu (displayed by right-clicking on the page). Clicking "view page source" on this menu produces the result on the right -- we can see the code that contains all the data and supporting information that the web browser needs to display the complete page. While the page on the left is easy to read, use, and looks good, the one on the right is a monstrosity. It takes some effort and experience to make any sense of it, but it's possible and necessary if we want to write custom web scrapers.
 
-![Normal and source view of the same BBC news article.](https://i.imgur.com/tbCS0sM.jpg)
+![**Image 1:** *Normal and source view of the same BBC news article.*](https://i.imgur.com/tbCS0sM.jpg)
 
 ### Navigating the source code using Find
 
 The first thing to do is to work out how the two pages correspond: which parts of the normally displayed website match up to which parts of the code. You can use "find" Ctrl + F) in the source code view to find specific pieces of text that are visible in the normal view to help with this. In the web page on the left, we can see that the story starts with the phrase "Getting a TV job". If we search for this phrase in the code view, we can find the corresponding text within the code, on line 805.
 
-![Finding text in the source code of a web page.](https://i.imgur.com/gOwTkyC.png)
+![**Image 2:** *Finding text in the source code of a web page.*](https://i.imgur.com/gOwTkyC.png)
 
 The `<p class="story-body__introduction">` just before the highlighted section is HTML code to specify that a paragraph (`<p>` in HTML) starts here and that this is a special kind of paragraph (an introduction to the story). The paragraph continues until the `</p>` symbol. You don't need to worry about understanding HTML completely, but you should be aware that it contains **both** the text data that makes up the news article and additional data about how to display it. 
 
@@ -58,11 +58,11 @@ In most pages, there is a lot of code to define the structure, layout, interacti
 
 You can open the developer tools for your browser from the main menu, with Google Chrome shown on the left and Mozilla Firefox on the right below. If you're using a different web browser, you should be able to find a similar setting.
 
-![Opening Developer Tools in Chrome (left) and Firefox (right)](https://i.imgur.com/7AjzPn8.png)
+![** Image 3:** *Opening Developer Tools in Chrome (left) and Firefox (right)*](https://i.imgur.com/7AjzPn8.png)
 
 Activating the tool brings up a new panel in your web browser, usually at the bottom or on the right-hand side. The tool contains an "Inspector" panel and a selector tool, which can be chosen by pressing the icon highlighted in red below. Once the selector tool is active, you can click on parts of the web page to view the corresponding source code. In the image below, we selected the same first paragraph in the normal view and we can see the `<p class=story-body__introduction">` code again in the panel below.
 
-![Viewing the code for a specific element using developer tools](https://i.imgur.com/4ZuAhrs.jpg)
+![**Image 4:** *Viewing the code for a specific element using developer tools*](https://i.imgur.com/4ZuAhrs.jpg)
 
 The Developer Tools are significantly more powerful than using the simple find tool, but they are also more complicated. You should choose a method based on your experience and the complexity of the page that you are trying to analyze.
 
@@ -71,7 +71,7 @@ Now that we've seen a bit more of how web pages are built in our browser, we can
 
 We'll do this through a Python Repl using the `requests` library. Open [repl.it](https://repl.it) and choose to create a new Python Repl.
 
-![](resources/01-newrepl.png)
+![**Image 5:** *Create new Repl*](resources/13-05-create-repl.png)
 
 This will take you to a working Python coding environment where you can write and run Python code. To start with, we'll download the content from the BBC News homepage, and print out the first 1000 characters of HTML source code.
 
@@ -88,7 +88,7 @@ print(response.text[:1000])
 Put this code in the `main.py` file that Repl automatically creates for you and press the "Run" button. After a short delay, you should see the output in the output pane - the beginning of HTML source code, similar to what we viewed in our web browser above.
 
 
-![Downloading a single page using Python](https://i.imgur.com/M4vISYq.png)
+![**Image 6:** *Downloading a single page using Python*](resources/13-06-download-webpage.png)
 
 Let's pull apart each of these lines.
 
@@ -106,7 +106,7 @@ Let's assume for now that we want to find all the news articles on the BBC News 
 
 If we inspect that element using the browser's developer tools, we can see it is a `<a>` element, which is HTML for a link, with an `<href>` component that points to the URL. Note that the `href` section goes only to the last part of the URL, omitting the https://www.bbc.com part. Because we are already on BBC, the site can use *relative URLs* instead of *absolute URLs*. This means that when you click on the link, your browser will figure out that the URL isn't complete and prepend it with https://www.bbc.com. If you look around the source code of the main BBC page, you'll find both relative and absolute URLs, which already makes scraping all of the URLs on the page more difficult.
 
-![Viewing headline links using Developer Tools.](https://i.imgur.com/AYHG8Wq.jpg)
+![**Image 7:** *Viewing headline links using Developer Tools.*](https://i.imgur.com/AYHG8Wq.jpg)
 
 
 We could try to use Python's built-in text search functions like `find()` or regular expressions to extract all of the URLs from the BBC page, yet it is not actually possible to do this reliably. HTML is a complex language which allows web developers to do many unusual things. For an amusing take on why we should avoid a "naive" method of looking for links, see [this very famous](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags) StackOverflow question and the first answer.
@@ -130,7 +130,7 @@ for link in links:
 
 If you run this code, you'll see that it outputs dozens of URLs, one per line. You'll probably notice that the code now takes quite a bit longer to run than before -- BeautifulSoup is not built into Python, it is a third-party module. This means that before running the code, Repl has to go and fetch this library and install it for you. Subsequent runs will be faster.
 
-![Extracting all links from BBC News.](https://i.imgur.com/30eumti.png)
+![**Image 8:** *Extracting all links from BBC News.*](resources/13-08-extract-links.png)
 
 The code is similar to what we had before with a few additions.
 
@@ -157,7 +157,7 @@ for link in links:
 Here we still loop through all of the links that BeautifulSoup found for us, but now we extract the `href` to its own variable immediately after. We then inspect this variable to make sure that it matches our conditions (starts with "/news" and ends with a digit), and only if it does, then we print it out.
 
 
-![Printing only links to news articles from BBC.](https://i.imgur.com/3xQ543Z.png)
+![**Image 9:** *Printing only links to news articles from BBC.*](resources/13-09-only-news-links.png)
 
 ## Fetching all of the articles from the homepage
 
@@ -221,7 +221,7 @@ You should see output similar to that in the image below (though your words will
 
 We can see that our crude extraction and parsing methods are far from perfect -- words like "Twitter" and "Facebook" appear in most articles because of the social media links at the bottom of each article, so their presence doesn't mean that Facebook and Twitter themselves are in the news today. Similarly, words like "From" aren't nouns, and other words like "BBC" and "Business" are also included because they appear on each page, outside of the main article text.
 
-![The final output of our program, showing the words that appear most often in BBC articles.](https://i.imgur.com/fmXRTMg.png)
+![**Image 10** *The final output of our program, showing the words that appear most often in BBC articles.*](resources/13-10-final-output.png)
 
 ## Where next? 
 We've completed the basics of web scraping and have looked at how the web works, how to extract information from web pages, and how to do some very basic text extraction. You will probably want to do something other than extract words from BBC! You can fork this Repl from https://repl.it/@GarethDwyer1/beginnerwebscraping and modify it to change which site it scrapes and what content it extracts. You can also join the [Repl Discord Server](https://discord.com/login?redirect_to=%2Fchannels%2F%40me) to chat with other developers who are working on similar projects and who will happily exchange ideas with you or help if you get stuck.

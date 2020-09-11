@@ -97,7 +97,7 @@ You'll need to:
 * Be careful about **spacing**. If you put a space on either side of the `=` in your `.env` file, these spaces will be part of the variable name or the value, so make sure you don't have any spaces around the `=` or at the end of the line.
 * Run the code again. Sometimes you'll need to refresh the whole page to make sure that your environment variables are successfully loaded.
 
-In the image below you we've highlighted the "Add file" button, the new file (`.env`) and how to define the secret token for our bot's use.
+In the image below we've highlighted the "Add file" button, the new file (`.env`) and how to define the secret token for our bot's use.
 
 ![Creating our .env file](resources/09_repl_nodejs_env.PNG)
 

@@ -19,7 +19,7 @@ By using this tutorial as a starting point, you can easily create your own bespo
 
 
 ## Setting up 
-Create a new Repl and select "Django Template" from the list of available languages and frameworks. Repl.it will go ahead and set up a full Django project for you with some sensible defaults. The project will include a single page saying "Hello Repl.it". It should look very similar to the  page below. (TO DO - update image)
+Create a new Repl and select "Django Template" from the list of available languages and frameworks. Repl.it will go ahead and set up a full Django project for you with some sensible defaults. The project will include a single page saying "Hello Repl.it". It should look very similar to the  page below.
 
 ![The repl.it IDE on a new Django project](https://i.imgur.com/htQRomt.png)
 
