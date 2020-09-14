@@ -105,7 +105,7 @@ Here we still parse the feed and extract all of the latest article URLs, but ins
 
 Press "run" again, and you should see a new window appear in the top right pane. Here we can see a basic web page (viewable already to anyone in the world by sharing the URL you see above it), and we see the same output that we previously printed to the console. 
 
-![**Image: 6:**](resources/14-06-flask-setup.png)
+![**Image: 6**](resources/14-06-flask-setup.png)
 
 ## Downloading articles and extracting the text
 
@@ -166,7 +166,7 @@ To use Flask's templates, we need to set up a specific file structure. Press the
 
 Select the new folder and press the "new file" button to create a new file inside our `templates` folder. Call the file `home.html`. Note below how the `home.html` file is indented one level, showing that it is inside the folder. If yours is not, drag and drop it into the `templates` folder so that Flask can find it.
 
-![**Image: 9**](resources/14-08-templates-dir.png)
+![**Image: 8**](resources/14-08-templates-dir.png)
 
 In the `home.html` file, add the following code, which is a mix between standard HTML and Jinja's templating syntax to mix dynamic content into the HTML.
 
@@ -210,7 +210,7 @@ The `render_template` call tells Flask to prepare some HTML to return to the use
 
 If everything went well, you should see different output now, which contains our header from the HTML and static first paragraph, followed by two paragraphs showing the same article content that we pulled before. If you don't see the updated webpage, you may need to hit refresh in the right pane again.
 
-![**Image:10**](resources/14-09-html-words.png)
+![**Image: 9**](resources/14-09-html-words.png)
 
 Now it's time to move on to generating the actual word clouds.
 
@@ -281,7 +281,7 @@ We made changes on lines 4, 8, 9, and 10, to change to a `clouds` array, populat
 
 If you restart the Repl and refresh the page, you should see something similar to the following. We can see the same content from the articles, however, we can now see the important keywords without having to read the entire article.
 
-![**Image:11**](resources/14-10-word-clouds.png)
+![**Image:10**](resources/14-10-word-clouds.png)
 
 For a larger view, you can pop out the website in a new browser tab using the button in the top right of the Repl editor (indicated in red above). 
 

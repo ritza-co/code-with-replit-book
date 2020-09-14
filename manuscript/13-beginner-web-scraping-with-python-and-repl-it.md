@@ -221,7 +221,7 @@ You should see output similar to that in the image below (though your words will
 
 We can see that our crude extraction and parsing methods are far from perfect -- words like "Twitter" and "Facebook" appear in most articles because of the social media links at the bottom of each article, so their presence doesn't mean that Facebook and Twitter themselves are in the news today. Similarly, words like "From" aren't nouns, and other words like "BBC" and "Business" are also included because they appear on each page, outside of the main article text.
 
-![**Image 10** *The final output of our program, showing the words that appear most often in BBC articles.*](resources/13-10-final-output.png)
+![**Image: 10** *The final output of our program, showing the words that appear most often in BBC articles.*](resources/13-10-final-output.png)
 
 ## Where next? 
 We've completed the basics of web scraping and have looked at how the web works, how to extract information from web pages, and how to do some very basic text extraction. You will probably want to do something other than extract words from BBC! You can fork this Repl from https://repl.it/@GarethDwyer1/beginnerwebscraping and modify it to change which site it scrapes and what content it extracts. You can also join the [Repl Discord Server](https://discord.com/login?redirect_to=%2Fchannels%2F%40me) to chat with other developers who are working on similar projects and who will happily exchange ideas with you or help if you get stuck.
