@@ -157,7 +157,7 @@ The first line creates a list of vectors which represent all of the training tex
 
 The second line does the same with the test vectors. The machine learning part isn't looking at our test texts (that would be cheating) -- it's just mapping the words to numbers so that it can work with them more easily. Note that when we called `fit()` on the vectoriser, we only showed it the training texts. Because there are words in the test texts that don't appear in the training texts, these words will simply be ignored and will not be represented in `testing_vectors`. 
 
-Now that we have a vectorised representation our problem, let's take a look at how we can solve it.
+Now that we have a vectorised representation of our problem, let's take a look at how we can solve it.
 
 ## Understanding classification
 

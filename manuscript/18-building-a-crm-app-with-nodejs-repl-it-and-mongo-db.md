@@ -21,17 +21,25 @@ Head over to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and hit the "T
 
 After signing up, under "Shared Clusters", press the "Create a Cluster" button.
 
-You now have to select a provider and a region. For the purposes of this tutorial, we chose Google Cloud Platform as the provider and Iowa (us-central1) as the region, although it should work regardless of the provider and region. ![Cluster Region](https://i.imgur.com/fHZDo7I.png)
+You now have to select a provider and a region. For the purposes of this tutorial, we chose Google Cloud Platform as the provider and Iowa (us-central1) as the region, although it should work regardless of the provider and region. 
+
+![**Image: 1** *Cluster Region*](https://i.imgur.com/fHZDo7I.png)
 
 Under "Cluster Name" you can change the name of your cluster. Note that you can only change the name now - it can't be changed once the cluster is created. After you've done that, click "Create Cluster". 
 
-![Cluster Name](https://i.imgur.com/fqvBpGQ.png)
+![**Image: 2** *Cluster Name*](https://i.imgur.com/fqvBpGQ.png)
 
 After a bit of time, your cluster will be created. Once it's available, click on “Database Access” under the Security heading in the left-hand column and then click "Add New Database User". You need a database user to actually store and retrieve data. Enter a username and password for the user and make a note of those details - you'll need them later. Select “Read and write to any database” as the user privilege. Hit "Add User" to complete this step.
 
-Next, you need to allow network access to the database. Click on "Network Access" in the left-hand column, and “Add IP Address”. Because we won't have a static IP from Repl.it, we're just going to allow access from anywhere - don't worry, the database is still secured with the username and password you created earlier. In the popup, click "Allow Access From Anywhere" and then "Confirm". ![Allow Access From Anywhere](https://i.imgur.com/YUoVxHk.png)
+![**Image: 3** *Adding a New Database User*](resources/18-03-add-db-user.png)
+
+Next, you need to allow network access to the database. Click on "Network Access" in the left-hand column, and “Add IP Address”. Because we won't have a static IP from Repl.it, we're just going to allow access from anywhere - don't worry, the database is still secured with the username and password you created earlier. In the popup, click "Allow Access From Anywhere" and then "Confirm". 
+
+![**Image: 4** *Allow Access From Anywhere*](https://i.imgur.com/YUoVxHk.png)
 
 Now select "Clusters", under "Data Storage" in the left-hand column. Click on "Connect" and select “Connect Your Application”. This will change the pop-up view. Copy the "Connection String" as you will need it shortly to connect to your database from Repl.it. It will look something like this: `mongodb+srv://<username>:<password>@cluster0-zrtwi.gcp.mongodb.net/test?retryWrites=true&w=majority`
+
+![**Image: 5** *Retrieve Your Connection String*](resources/18-05-db-connect-string.png)
 
 ## Creating a Repl and connecting to our Database
 First, we need to create a new Node.js Repl to write the code necessary to connect to our shiny new Database. Navigate to repl.it and create a new Repl, selecting "Node.js" as the language.
@@ -167,13 +175,17 @@ Make a new file called `create.html` and paste the following into it:
 ```
 We won't go in-depth into the above HTML. It is a very basic form with 4 fields (name, address, telephone, note) and a Submit button, which creates an interface that will look like the one below.
 
-![Customer Details](https://i.imgur.com/Y1IIDq6.png)
+![**Image: 6** *Customer Details*](https://i.imgur.com/Y1IIDq6.png)
 
 When the user presses the submit button a POST request is made to `/create` with the data in the form - we still have to handle this request in our code as we're currently only handling a GET request to `/`.
 
 If you now start up your application (click the “run” button)  a new window should appear on the right that displays the "create" button we defined just now in "create.html". You can also navigate to `https://<repl_name>.<your_username>.repl.co` (replace <repl_name> with whatever you named your Repl (but with no underscores or spaces) and  <your_username> with your Repl username) to see the form. You will be able to see this URL in your Repl itself.
 
+![**Image: 7** *Run Your Application*](resources/18-07-first-run.png)
+
 If you select "create" and then fill in the form and hit submit, you'll get a response back that says ```Cannot POST /create```. This is because we haven't added the code that handles the form POST request, so let's do that. 
+
+![**Image: 8** *Cannot POST/create*](resources/18-08-cannot-post.png)
 
 Add the following code into your `index.js` file, below the `app.get` entry that we made above.
 ```
@@ -199,6 +211,8 @@ app.post('/create', function (req, res, next) {
 * **Line 8** gives us some feedback that the insert happened successfully.
 
 If you now run the Repl (you may need to refresh it) and submit the filled-in form, you'll get a message back that says "Customer created". If you then go and look in your cluster in MongoDB and select the "collections" button, you'll see a document has been created with the details that we submitted in the form.
+
+![**Image: 9** *Customer Created*](resources/18-09-customer-created.png)
 
 ## Updating and deleting database entries
 As a final step in this tutorial, we want to be able to update and delete database documents in our collection. To make things simpler, we're going to make a new HTML page where we can request a document and then update or delete it.
@@ -230,7 +244,9 @@ In your `index.html` file, add the following code after the `</form>` tag:
   <input type="submit" value="Update/Delete">
 </form>
 ```
-This adds a new button that will make a GET request to `/get`, which will then return `get.html`. ![Index](https://i.imgur.com/CHymS42.png)
+This adds a new button that will make a GET request to `/get`, which will then return `get.html`.
+
+![**Image:10** *Index*](resources/18-10-buttons.png)
 
 Make a new file called `get.html` with the following contents:
 ```
@@ -245,7 +261,9 @@ Make a new file called `get.html` with the following contents:
 </body>
 </html>
 ```
-This makes a simple form with an input for the customer's name and a button. ![Get Customer](https://i.imgur.com/Pnji1Nl.png)
+This makes a simple form with an input for the customer's name and a button. 
+
+![**Image:11** *Get Customer*](resources/18-11-get-customer.png)
 
 Clicking this button will then make a GET call to `/get-client` which will respond with the client details where we will be able to update or delete them.
 
@@ -297,7 +315,7 @@ We have also put in placeholder variables for name, address, telephone, and note
 
 If you now run the code, you will have an index page with 2 buttons. Pressing the 'Update/Delete' button will take you to a new page that asks for a Customer name. Filling the customer name and pressing 'Get customer' will, after a little time, load a page with the customer's details and 2 buttons below that say 'Update' and 'Delete'. Make sure you enter a customer name you have entered before.
 
-![Update-Delete](https://i.imgur.com/m1lxFhs.png)
+![**Image:12** *Update-Delete*](resources/18-12-customer-details.png)
 
 Our next step is to add the 'Update' and 'Delete' functionality. Add the following code below your routes in `index.js`:
 ```
