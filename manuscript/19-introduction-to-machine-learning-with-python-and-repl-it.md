@@ -215,7 +215,7 @@ fig.savefig('tree.png')
 
 In the left-hand pane, you should see a file called 'tree.png'. If you open it, your tree graph should look as follows:
 
-![A visualised decision tree](resources/decision_tree.png)
+![**Image: 1** *A visualised decision tree*](https://i.ritzastatic.com/repl/codewithrepl/19-intro-ML/19-01-decision_tree.png)
 
 The above shows a decision tree that only learned two rules. The first rule (top square) is about the word "hate". The rule is "is the number of times 'hate' occurs in this sentence less than or equal to 0.5". None of our sentences contain duplicate words, so each rule will really be only about whether the word appears or not (you can think of the `<= 0.5` rules as `< 1` in this case).
 
