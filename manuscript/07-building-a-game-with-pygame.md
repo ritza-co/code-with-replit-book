@@ -112,13 +112,20 @@ PyGame records all "events", including mouse clicks, and makes these available t
 
 If the user clicks on an empty space, that will still be recorded but we will simply ignore it. If the user clicks on a falling ball, we want it to change direction.
 
-Right after the `while True` loop, add the following lines of code.
+To achieve this, add a `for` loop inside the existing `while` loop. The entire game loop should look as follows:
 
 ```python
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if ball.rect.collidepoint(pygame.mouse.get_pos()):
-                    ball.speed = [0,-1]
+                    ball.speed[0] = random.uniform(-4, 4)
+                    ball.speed[1] = -2
+        screen.fill(BACKGROUND)
+        screen.blit(ball.image, ball.rect)
+        ball.update()
+        pygame.display.flip()
+        clock.tick(60)
 ```
 
 With this code, we loop through all events and check for left click (`MOUSEBUTTONDOWN`) events. If we find one, we check if the click happened on top of the ball (using `collidepoint()` which checks for overlapping coordinates), and in this case we reverse the direction of the ball (still no x-axis or horizontal movement, but we make the ball move negatively on the y-axis, which is up.)
