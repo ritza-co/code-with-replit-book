@@ -1,6 +1,6 @@
 # Using the Repl.it database
 
-![](https://www.codewithrepl.it/img/11-db-title-2.png)
+![](https://i.ritzastatic.com/repl/codewithrepl/11-database/11-01-db-heading.png)
 
 In previous tutorials we used the file system to store data persistently. This works fine for smaller projects, but there are some limitations to storing data directly in a file system. A more advanced way to store data which is used by nearly any production application is a database.
 
@@ -40,7 +40,7 @@ print(db["Smith, John"])
 
 You should see the phone number printed to the console, as shown below.
 
-![**Image 1:** *Viewing a phone number from the database.*](https://www.codewithrepl.it/img/11-phone-out.png)
+![**Image 2:** *Viewing a phone number from the database.*](https://i.ritzastatic.com/repl/codewithrepl/11-database/11-02-print-number.png)
 
 ### How is this different from a dictionary?
 
@@ -145,7 +145,7 @@ prompt_add_contact()
 
 Test that this works - run it twice and enter the same name both times, with a different phone number. You should see the confirmation the first time, but the second time it will inform you that the contact already exists, as shown below.
 
-![**Image 2:** *Adding new contacts or showing an error.*](https://www.codewithrepl.it/img/11-already-exists.png)
+![**Image 3:** *Adding new contacts or showing an error.*](https://i.ritzastatic.com/repl/codewithrepl/11-database/11-03-contact-already-exists.png)
 
 ### Allowing users to retrieve details of stored contacts
 
@@ -179,7 +179,7 @@ Our new code to go into `contacts.py` is very simple and it might be tempting to
 
 Run the code again and input the same name as before. If all went well, you'll see the number, as in the example below.
 
-![**Image 3:** *Retrieving contacts from user input.*](https://www.codewithrepl.it/img/11-getting-number.png)
+![**Image 4:** *Retrieving contacts from user input.*](https://i.ritzastatic.com/repl/codewithrepl/11-database/11-04-get-number.png)
 
 ### Interlude: Creating a main menu
 
@@ -278,7 +278,7 @@ def prompt_get_contact():
 
 Run the code again and choose to add a contact. Enter "Smith, Mary" when prompted and any phone number. When the program starts over, choose to find a contact and input "Smi". It should print out both "Smith" matches that we have, as shown below.
 
-![**Image 4:** *The user menu: They can now choose what action to do.*](https://www.codewithrepl.it/img/11-multiple-matches.png)
+![**Image 5:** *The user menu: They can now choose what action to do.*](https://i.ritzastatic.com/repl/codewithrepl/11-database/11-05-choose-add-contact.png)
 
 ### Allowing users to update contacts
 

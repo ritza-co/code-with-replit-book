@@ -21,7 +21,7 @@ By using this tutorial as a starting point, you can easily create your own bespo
 ## Setting up 
 Create a new Repl and select "Django Template" from the list of available languages and frameworks. Repl.it will go ahead and set up a full Django project for you with some sensible defaults. The project will include a single page saying "Hello Repl.it". It should look very similar to the  page below.
 
-![The repl.it IDE on a new Django project](https://i.imgur.com/htQRomt.png)
+![**Image: 1** *The repl.it IDE on a new Django project*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-01-new-django-template.png)
 
 In the left-most panel, you can see all the files that make up your Django project.
 
@@ -46,7 +46,7 @@ This is a file written in [Django's template language](https://docs.djangoprojec
 
 Change the code where it says "Hello Repl.it" to read "Weather", and press the restart button as indicated below to see the result change from "Hello Repl.it" to "Weather". 
 
-![Repl.it Restart and pop-out buttons](https://i.imgur.com/QgSIMIu.png)
+![**Image: 2** *Repl.it Restart and pop-out buttons*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-02-homepage-weather.png)
 
 
 You can also press the pop-out button to the right of the the URL bar to open only the resulting web page that we're building, as a visitor would see it. You can share the URL with anyone and they'll be able to see your Weather website already!
@@ -94,7 +94,7 @@ These are two snippets of JavaScript. The first (lines 1-5) is a function that w
 
 If you open your web app again and refresh the page, you should see this script in action (if you're running an adblocker, it might block the ipify scripts, so try disabling that temporarily if you have any issues). 
 
-![](https://i.imgur.com/DROK5bs.png)
+![**Image: 3**](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-03-your-ip-is.png)
 
 
 This code doesn't do anything with the IP address except display it to the user, but it is enough to see that the first component of our system (getting our user's IP Address) is working. This also introduces the first *dynamic* functionality to our app -- before, any visitor would see exactly the same thing, but now we can show each visitor something related specifically to them (no two people have the same IP address).
@@ -146,11 +146,11 @@ In line 10, we print out the IP address that we will pass along to this route fr
 
 To test this part of our system, open your web application in a new tab and add `/get_weather_from_ip?ip_address=123` to the URL. Here, we're asking our system to fetch weather data for the IP address `123` (not a real IP address). In your browser, you'll see the fake weather data displayed in a format that can easily be programmatically parsed.
 
-![Viewing the fake JSON data](https://i.imgur.com/scdld1E.png)
+![**Image: 4** *Viewing the fake JSON data*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-04-test-weather-data.png)
 
 In our Repl's output, we can see that the backend of our application has found the "IP address" and printed it out, between some other outputs telling us which routes are being visited and which port our server is running on:
 
-![Django print output of fake IP](https://i.imgur.com/KJDlDL8.png)
+![**Image: 5** *Django print output of fake IP*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-05-output-route-port.png)
 
 The steps that remain now are to:
 
@@ -215,7 +215,7 @@ This adds an empty HTML *paragraph* element which our JavaScript can populate on
 Now reload the app and you should see our fake `20` being displayed to the user. If you don't see what you expect, open up your browser's developer tools  for [Chrome](https://developers.google.com/web/tools/chrome-devtools/) and [Firefox](https://developer.mozilla.org/son/docs/Tools)) and have a look at the Console section for any JavaScript errors. A clean console (with no errors) is shown below.
 
 
-![](https://i.imgur.com/6ZKlc4N.png)
+![**Image: 6**](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-06-add-weather-data-html.png)
 
 
 Now it's time to change out our mock data for real data by calling two services backend -- the first to get the user's location from their IP address and the second to fetch the weather for that location. 
@@ -240,7 +240,7 @@ def get_location_from_ip(ip_address):
 
 You can see the response that we'll be getting from this service by trying it out in your browser. Visit [http://ip-api.com/json/41.71.107.123](http://ip-api.com/json/41.71.107.123) to see the JSON response for that specific IP address. 
 
-![](https://i.imgur.com/2LAhUwr.png)
+![**Image: 7**](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-07-json-response.png)
 
 Take a look specifically at the highlighted location information that we'll need to extract to pass on to a weather service.
 
@@ -259,7 +259,7 @@ def get_weather_from_ip(request):
 
  Now, instead of just printing the IP address that we get sent and making up some weather data, we use the IP address to guess the user's location, and pass the city and country  code back to the template to be displayed. If you reload your app again, you should see something similar to the following (though hopefully with your location instead of mine).
 
-![weather app, location showing](https://i.imgur.com/462TVyW.png)
+![**Image: 8** *weather app, location showing*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-08-weather-location.png)
 
 That's the location component of our app done and dusted -- let's move on to getting weather data for that location now.
 
@@ -270,7 +270,7 @@ To get weather data automatically from [OpenWeatherMap](https://openweathermap.o
 
 Visit [openweathermap.org](https://openweathermap.org/), hit the "sign up" button, and register for the service by giving them an email address and choosing a password. Then navigate to the [API Keys](https://home.openweathermap.org/api_keys)  section and note down your unique API key (or copy it to your clipboard).
 
-![OpenWeatherMap API Key page](https://i.imgur.com/qzQGAV1.png)
+![**Image: 9** *OpenWeatherMap API Key page*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-09-openweathermap-key.png)
 
 This key is a bit like a password -- when we use OpenWeatherMap's service, we'll always send along this key to indicate that it's us making the call. Because Repl.it's projects are public by default, we'll need to be careful to keep this key private and prevent other people making too many calls using our OpenWeatherMap quota (potentially making our app fail when OpenWeatherMap starts blocking our calls). Luckily Repl.it provides a neat way of solving this problem [using `.env `files](https://repl.it/site/docs/secret-keys). 
 
@@ -280,7 +280,7 @@ In your project, create a new file using the "New file" button as shown below. M
 OPEN_WEATHER_TOKEN=1be9250b94bf6803234b56a87e55f
 ```
 
-![Creating a new file](https://i.imgur.com/wPDhRuC.png)
+![**Image: 10** *Creating a new file*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-10-create-new-file.png)
 
 Repl.it will load the contents of this file into our server's [environment variables](https://wiki.archlinux.org/index.php/environment_variables). We'll be able to access this using the `os` library in Python, but when other people view or fork our Repl, they won't see the `.env` file, keeping our API key safe and private. 
 
@@ -288,7 +288,7 @@ To fetch weather data, we need to call the OpenWeatherMap api, passing along a s
 
 To test this, you can visit the URL in your browser first. If you prefer Fahrenheit to Celsius, simply change the `unit=metric` part of the url to `units=imperial`. 
 
-![Json response from OpenWeatherMap](https://i.imgur.com/Mt7RVFp.png)
+![**Image:11** *Json response from OpenWeatherMap*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-11-test-URL.png)
 
 Let's write one last function in our `views.py` file to replicate this call for our visitor's city which we previously displayed. 
 
@@ -328,7 +328,7 @@ def get_weather_from_ip(request):
   
  We now get the weather data in line 6, parse this into a description and temperature in lines 7 and 8, and add this to the string we pass back to our template in line 9. If you reload the page, you should see your location and your weather.
  
- ![Weather app showing location and weather](https://i.imgur.com/D1XIZwZ.png)
+ ![**Image: 12** *Weather app showing location and weather*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-12-wether-data-complete.png)
  
  Because we're doing several API calls now, the page might be blank for a few seconds after loading before populating the weather and location data. Again, if you don't see what you expect, check the Repl.it server output and have a look at your browser's developer tools console.
  
@@ -339,7 +339,7 @@ You now have a basic Django application that can be visited by anyone and which 
 
 If you want to extend the application, Repl.it makes it easy to "fork", which means you'll be able to clone the Repl exactly where we left off and modify it any way you want. Simply head over to my Repl at [https://repl.it/@GarethDwyer1/weather-location-tutorial](https://repl.it/@GarethDwyer1/weather-location-tutorial) and hit the "Fork" button. If you didn't create an account at the beginning of this tutorial, you'll be prompted to create one again. (You can even use a lot of Repl functionality without creating an account.) 
 
-![Forking a Repl](https://i.imgur.com/GlOnmAw.png)
+![**Image: 13** *Forking a Repl*](https://i.ritzastatic.com/repl/codewithrepl/17-django-app/17-13-fork-repl.png)
 
 If you're stuck for ideas, some possible extensions are:
 

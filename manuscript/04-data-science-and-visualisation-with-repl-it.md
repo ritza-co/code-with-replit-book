@@ -29,7 +29,7 @@ There are many traditions in the Python data science world about how to import l
 
 Repl.it knows that it needs an `X` server to display this plot (triggered when you call `plt.show()`), so after running this code you'll see "Starting X" in the main output console and a new graphical window will appear.
 
-![**Image 1:** *We can plot a basic line plot by passing in the X and Y values*](https://www.codewithrepl.it/img/04-basic-plot.png)
+![**Image 1:** *We can plot a basic line plot by passing in the X and Y values*](https://i.ritzastatic.com/repl/codewithrepl/04-data-science/04-01-matplotlib.png)
 
 The `X` server is very limited compared to a full operating system GUI. Beneath the plot, you'll see some controls to pan and zoom around the image, but if you try to use them you'll see that the experience is not that smooth.
 
@@ -79,7 +79,7 @@ plt.show()
 
 If you run this, you'll notice it takes a little bit longer than the six point plot we created before, as it now has to plot nearly 30 000 data points. Once it's done, you should see something similar to the following (though, as the colours were chosen randomly, yours might look different).
 
-![**Image 2:** *All the cities in the US plotted by state as a scatterplot*](https://www.codewithrepl.it/img/04-scatter-plot-us.png)
+![**Image 2:** *All the cities in the US plotted by state as a scatterplot*](https://i.ritzastatic.com/repl/codewithrepl/04-data-science/04-02-scatter-us-cities.png)
 
 You'll also notice that while it's recognisable as the US, the proportions are not right. Mapping a 3D sphere to a 2D plane is surprisingly difficult and there are many different ways of doing it.
 
@@ -125,7 +125,7 @@ If you run this, you'll see it plots each country in a similar way to our previo
 
 In the output pane below you can also see that the correlation coefficient between the two variables is 0.67 which is a fairly strong positive correlation.
 
-![**Image 3:** *Using `seaborn` to create a scatter plot with a best fit line to see correlation*](https://www.codewithrepl.it/img/04-gdp-life-exp.png)
+![**Image 3:** *Using `seaborn` to create a scatter plot with a best fit line to see correlation*](https://i.ritzastatic.com/repl/codewithrepl/04-data-science/04-03-plot-with-pandas.png)
 
 Data science and data visualisation are huge topics, and there are dozens of Python libraries that can be used to plot data. For a good overview of all of them and their strengths and weaknesses, you should watch [Jake Vanderplas's talk](https://www.youtube.com/watch?v=FytuB8nFHPQ). 
 
@@ -139,7 +139,7 @@ plt.savefig("GDPlife.png")
 
 Rerun the code. Instead of seeing the plot appear in the right-hand pane, you'll see a new file in the files pane. Clicking on it will show you the PNG file in the editing pane.
 
-![**Image 4:** *Saving a PNG file for later use*](https://www.codewithrepl.it/img/04-save-png.png)
+![**Image 4:** *Saving a PNG file for later use*](https://i.ritzastatic.com/repl/codewithrepl/04-data-science/04-04-plot-save-png.png)
 
 ## Make it your own
 

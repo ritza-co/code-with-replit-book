@@ -6,7 +6,7 @@ In this tutorial, we'll build a web application using Python and Flask that tran
 
 At the end of this tutorial, our users will see a page similar to the one shown below, but containing the latest news headlines from BBC news. We'll learn some tricks about web scraping, RSS feeds, and building image files directly in memory along the way.
 
-![**Image: 1**](resources/final-demo.png)
+![**Image: 1**](rhttps://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-01-wordclouds-intro.png)
 
 ## Overview and requirements
 We'll be building a simple web application step-by-step and explaining each line of code in detail. To follow, you should have some basic knowledge of programming and web concepts, such as what if statements are and how to use URLs. We'll be using Python for this tutorial, but we won't assume that you're a Python expert.
@@ -31,11 +31,11 @@ In this tutorial, instead of scraping the links to news articles directly from t
 
 RSS feeds are published as XML documents. Every time BBC (and other places) publishes a new article to their home page, they also update an XML machine-readable document at http://feeds.bbci.co.uk/news/world/rss.xml. This is a fairly simple feed consisting of a `<channel>` element, which has some metadata and then a list of `<item>` elements, each of which represents a new article. The articles are arranged chronologically, with the newest ones at the top, so it's easy to retrieve new content.
 
-![**Image: 2**](resources/xml.png)
+![**Image: 2**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-02-xml.png)
 
 If you click on the link above, you won't see the XML directly. Instead, it has some associated styling information so that most web browsers will display something that's a bit more human friendly. For example, opening the page in Google Chrome shows the page below. In order to view the raw XML directly, you can right-click on the page and click "view source". 
 
-![**Image: 3**](resources/xml-styled.png)
+![**Image: 3**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-03-xml-styled.png)
 
 RSS feeds are used internally by software such as the news reader [Feedly](feedly.com) and various email clients. We'll be consuming these RSS feeds with a Python library to retrieve the latest articles from BBC. 
 
@@ -43,7 +43,7 @@ RSS feeds are used internally by software such as the news reader [Feedly](feedl
 
 In this tutorial, we'll be building our web application using [Repl.it](repl.it), which will allow us to have a consistent code editor, environment, and deployment framework in a single click. Head over there and create an account. Choose to create a Python Repl, and you should see an editor where you can write and run Python code, similar to the image below. You can write Python code in the middle pane, run it by pressing the green "run" button, and see the output in the right pane. In the left pane, you can see a list of files, with `main.py` added there by default.
 
-![**Image: 4**](resources/14-04-setup-repl.png)
+![**Image: 4**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-04-setup-repl.png)
 
 ## Pulling data from our feed and extracting URLs
 
@@ -65,7 +65,7 @@ Feedparser does most of the heavy lifting for us, so we don't have to get too cl
 
 If you run this code, you should see a few dozen URLs output on the right pane, as in the image below.
 
-![**Image: 5**](resources/14-05-printing-urls.png)
+![**Image: 5**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-05-printing-urls.png)
 
 ## Setting up a web application with Flask
 
@@ -105,7 +105,7 @@ Here we still parse the feed and extract all of the latest article URLs, but ins
 
 Press "run" again, and you should see a new window appear in the top right pane. Here we can see a basic web page (viewable already to anyone in the world by sharing the URL you see above it), and we see the same output that we previously printed to the console. 
 
-![**Image: 6**](resources/14-06-flask-setup.png)
+![**Image: 6**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-06-flask-setup.png)
 
 ## Downloading articles and extracting the text
 
@@ -156,7 +156,7 @@ Let's take a closer look at what has changed.
 
 If you run the code now, you should see output similar to that shown in the image below (you may need to hit refresh in the right pane). You can see text from the first article in the top-right pane now, and the text for the second article is further down the page. You'll notice that out text extraction algorithm isn't perfect and there's still some extra text about "Share this" at the top that isn't actually part of the article, but this is good enough for us to create word clouds from later.
 
-![**Image: 7**](resources/14-07-get-url-content.png)
+![**Image: 7**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-07-get-url-content.png)
 
 ## Returning HTML instead of plain text to the user
 
@@ -166,7 +166,7 @@ To use Flask's templates, we need to set up a specific file structure. Press the
 
 Select the new folder and press the "new file" button to create a new file inside our `templates` folder. Call the file `home.html`. Note below how the `home.html` file is indented one level, showing that it is inside the folder. If yours is not, drag and drop it into the `templates` folder so that Flask can find it.
 
-![**Image: 8**](resources/14-08-templates-dir.png)
+![**Image: 8**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-08-templates-dir.png)
 
 In the `home.html` file, add the following code, which is a mix between standard HTML and Jinja's templating syntax to mix dynamic content into the HTML.
 
@@ -210,7 +210,7 @@ The `render_template` call tells Flask to prepare some HTML to return to the use
 
 If everything went well, you should see different output now, which contains our header from the HTML and static first paragraph, followed by two paragraphs showing the same article content that we pulled before. If you don't see the updated webpage, you may need to hit refresh in the right pane again.
 
-![**Image: 9**](resources/14-09-html-words.png)
+![**Image: 9**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-09-html-words.png)
 
 Now it's time to move on to generating the actual word clouds.
 
@@ -281,7 +281,7 @@ We made changes on lines 4, 8, 9, and 10, to change to a `clouds` array, populat
 
 If you restart the Repl and refresh the page, you should see something similar to the following. We can see the same content from the articles, however, we can now see the important keywords without having to read the entire article.
 
-![**Image:10**](resources/14-10-word-clouds.png)
+![**Image:10**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-10-word-clouds.png)
 
 For a larger view, you can pop out the website in a new browser tab using the button in the top right of the Repl editor (indicated in red above). 
 

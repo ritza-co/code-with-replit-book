@@ -21,23 +21,23 @@ Let's get through these admin steps first and then we can get to the fun part of
 
 Once you have an account, you'll want to create a Discord application. Visit [the Discord developer's page](https://discordapp.com/developers/applications/) and press the "New application" button, as in the image below. 
 
-![**Image: 1** *Creating a new Discord application*](resources/discord_newapplication.PNG)
+![**Image: 1** *Creating a new Discord application*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-01-discord_newapplication.png)
 
 Fill out a name for your bot and select "Create".
 
 The first thing to do on the next page is to note your Client ID, which you'll need to add the bot to the server. You can come back later and get it from this page, or copy it somewhere where you can easily find it later.
 
-![**Image: 2** *Record your Client ID*](resources/discord_client_id.PNG)
+![**Image: 2** *Record your Client ID*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-02-discord_client_id.png)
 
 You can also rename the application and provide a description for your bot at this point and press "Save Changes".
 
 You have now created a Discord application. The next step is to add a bot to this application, so head over to the "Bot" tab using the menu on the left and press the "Add Bot" button, as indicated below. Click "Yes, do it" when Discord asks if you're sure about bringing a new bot to life.
 
-![**Imgage: 3** *Adding a bot to our Discord Application*](resources/discord_addbot.PNG)
+![**Imgage: 3** *Adding a bot to our Discord Application*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-03-discord_addbot.png)
 
 The last thing we'll need from our bot is a Token. Anyone who has the bot's token can prove that they own the bot, so you'll need to be careful not to share this with anyone. You can get the token by pressing "Click to Reveal Token", or copy it to your clipboard without seeing it by pressing "Copy".
 
-![**Image: 4** *Generating a token for our Discord bot*](resources/discord_bottoken.PNG)
+![**Image: 4** *Generating a token for our Discord bot*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-04-discord_bottoken.png)
 
 Take note of your token or copy it to your clipboard, as we'll need to add it to our code soon.
 
@@ -45,7 +45,7 @@ Take note of your token or copy it to your clipboard, as we'll need to add it to
 ### Creating a Discord server
 If you don't have a Discord server to add your bot to, you can create one by either opening the desktop Discord application that you downloaded earlier or returning to the Discord home page in your browser. Press the "+" icon indicated by the exclamation mark, as shown below, to create a server.
 
-![**Image: 5** *Creating a Discord server*](resources/discord_addserver.PNG)
+![**Image: 5** *Creating a Discord server*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-05-discord_addserver.png)
 
 Press "Create a server" in the screen that follows, and then give your server a name. Once the server is up and running, you can chat with yourself, or invite some friends to chat with you. Soon we'll invite our bot to chat with us as well.
 
@@ -58,7 +58,7 @@ https://discordapp.com/api/oauth2/authorize?scope=bot&client_id=7462691629173310
 
 Visit the URL that you created in your web browser and you'll see a page similar to the following where you can choose which server to add your bot to.
 
-![**Image: 6** *Authorizing our bot to join our server*](resources/discord_addbottoserver.PNG)
+![**Image: 6** *Authorizing our bot to join our server*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-06-discord_addbottoserver.png)
 
 Select the server we created in the step before this and hit the "authorize" button. After completing the captcha, you should get an in-app Discord notification telling you that your bot has joined your server.
 
@@ -79,7 +79,7 @@ To get around the problem of needing to give our *code* access to the token whil
 
 First, we need to create a new file called exactly `.env`. Select "Add file" in the left pane, as shown in the image below, and name this file `.env`. It is important not to leave out the `.` at the beginning. 
 
-![**Image: 7** *Create a new file called .env*](resources/15-07-create-env-file.png)
+![**Image: 7** *Create a new file called .env*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-07-create-env-file.png)
 
 Open this new file and add a variable to define your bot's secret token (note that this is the second token that we got while setting up the bot -- different from the Client ID that we used to add our bot to our server). It should look something like:
 
@@ -92,7 +92,7 @@ You'll need to:
 * Be careful about **spacing**. Unlike in Python, if you put a space on either side of the `=` in your `.env` file, these spaces will be part of the variable name or the value, so make sure you don't have any spaces around the `=` or at the end of the line.
 * Run the code again. Sometimes you'll need to refresh the whole page to make sure that your environment variables are successfully loaded.
 
-![**Image: 8** *Creating our .env file*](resources/15-08-env-token.png)
+![**Image: 8** *Creating our .env file*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-08-env-token.png)
 
 Let's make a Discord bot that repeats everything we say but in reverse. We can do this in only a few lines of code. In your `main.py` file, add the following:
 
@@ -129,19 +129,19 @@ The last two lines get our secret token from the environment variables that we s
 
 Press the big green "Run" button again and you should see your bot reporting a successful channel join in the Repl output.
 
-![**Image: 9** *Seeing our bot join our server*](resources/15-09-bot-ready.png)
+![**Image: 9** *Seeing our bot join our server*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-09-bot-ready.png)
 
 Open Discord, and from within the server we created earlier, select your ReplBotApplication from the pane on the right-hand side of the screen.
 
-![**Image:10** *The Repl bot is active*](resources/repl_bot_active.PNG).
+![**Image:10** *The Repl bot is active*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-10-repl_bot_active.png).
 
 Once you have selected this, you will be able to send a message (by typing into the box highlighted below) and see your bot respond!
 
-![**Image:11** *Send a message to your bot*](resources/message_repl_bot.PNG).
+![**Image:11** *Send a message to your bot*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-11-message_repl_bot.png).
 
 The bot responds each time, reversing the text we enter.
 
-![**Image:12** *Our bot can talk!*](https://i.imgur.com/Wu1ZU6F.png).
+![**Image:12** *Our bot can talk!*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-12-replbot-response.png).
 
 ## Keeping our bot alive
 Your bot can now respond to messages, but only for as long as your Repl is running. If you close your browser tab or shut down your computer, your bot will stop and no longer respond to messages on Discord.
@@ -187,7 +187,7 @@ client.run(token)
 
 After doing this and hitting the green "Run" button again, you should see some changes to your Repl. For one, you'll see a new pane in the top right which shows the web output from your server. We can see that visiting our Repl now returns a basic web page showing the "I'm alive" string that we told our web server to return by default. In the bottom-right pane, you can also see some additional output from Flask starting up and running continuously, listening for requests.
 
-![**Image:13** *Output from our Flask server*](resources/15-10-flask-server.png)
+![**Image:13** *Output from our Flask server*](https://i.ritzastatic.com/repl/codewithrepl/15-python-discord-bot/15-13-flask-server.png)
 
 Now your bot will stay alive even after closing your browser or shutting down your development machine. Repl will still clean up your server and kill your bot after about one hour of inactivity, so if you don't use your bot for a while, you'll have to log into Repl and start the bot up again. Alternatively, you can set up a third-party (free!) service like [Uptime Robot](https://uptimerobot.com/). Uptime Robot pings your site every 5 minutes to make sure it's still working -- usually to notify you of unexpected downtime, but in this case, the constant pings have the side effect of keeping our Repl alive as it will never go more than an hour without receiving any activity.
 
