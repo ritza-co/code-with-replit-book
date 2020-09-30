@@ -119,8 +119,7 @@ To achieve this, add a `for` loop inside the existing `while` loop. The entire g
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if ball.rect.collidepoint(pygame.mouse.get_pos()):
-                    ball.speed[0] = random.uniform(-4, 4)
-                    ball.speed[1] = -2
+                    ball.speed = [0,-1]
         screen.fill(BACKGROUND)
         screen.blit(ball.image, ball.rect)
         ball.update()
