@@ -6,7 +6,7 @@ In this tutorial, we'll build a web application using Python and Flask that tran
 
 At the end of this tutorial, our users will see a page similar to the one shown below, but containing the latest news headlines from BBC news. We'll learn some tricks about web scraping, RSS feeds, and building image files directly in memory along the way.
 
-![**Image: 1**](rhttps://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-01-wordclouds-intro.png)
+![**Image: 1**](https://i.ritzastatic.com/repl/codewithrepl/14-word-clouds/14-01-wordclouds-intro.png)
 
 ## Overview and requirements
 We'll be building a simple web application step-by-step and explaining each line of code in detail. To follow, you should have some basic knowledge of programming and web concepts, such as what if statements are and how to use URLs. We'll be using Python for this tutorial, but we won't assume that you're a Python expert.
