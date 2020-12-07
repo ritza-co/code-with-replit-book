@@ -195,7 +195,7 @@ If you run this script every day for a few months, you'll have a nice data set t
 
 Once you've downloaded the `.zip` file you can extract it in your local file system and find all of the data files which can now be opened with other programs as required.
 
-![**Image 13:** *The created data files on our local file system*](hhttps://i.ritzastatic.com/repl/codewithrepl/02-managing-files/02-13-files-zip.png)
+![**Image 13:** *The created data files on our local file system*](https://i.ritzastatic.com/repl/codewithrepl/02-managing-files/02-13-files-zip.png)
 
 From the same menu, you can also choose `upload file` or `upload folder` to import files into your repl. For example, if you cleaned the files using external software and then wanted your repl to start appending new data to the cleaned versions, you could re-import them.
 

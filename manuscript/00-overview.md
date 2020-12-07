@@ -34,7 +34,7 @@ Data is only useful if it can be easily understood. Plots, charts, and graphs ar
 
 Did we mention that no one is an island? Coders don't have to work alone. You can invite your friends to code along with you, a technique used by beginners and experts alike. Learn how to code collaboratively, as if you were using a Google Doc.
 
-## Part 2: advanced Repl.it use
+## Part 2: Advanced Repl.it use
 
 Once you know the basics, it's time to build larger and more complicated projects and keep them secure.
 
@@ -68,7 +68,7 @@ Find, download, play, and control the volume of your music, all in code. If that
 
 This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
 
-## Part 3: building your own projects
+## Part 3: Building your own projects
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
 
