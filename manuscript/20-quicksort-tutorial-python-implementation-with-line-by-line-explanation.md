@@ -215,9 +215,3 @@ The code generates a random list of 100 000 numbers and sorts this list in aroun
 If you want to try the code from the tutorial out, visit the Repl at [https://repl.it/@GarethDwyer1/quicksort](https://repl.it/@GarethDwyer1/quicksort?language=python3). You'll be able to run the code, see the results, and even fork it to continue developing or testing it on your own. 
 
 If you need help, the folk over at the [Repl discord server](https://repl.it/discord) are very friendly and keen to help people learn. 
-
----
-
-# Closing note
-
-We have now come to the end of the series of tutorials. You have learnt the basics of the Repl.it IDE, worked with more advanced features and gone through a number of practical projects. This doesn't mean the end of fun projects, for you should now be equipped to tackle your own projects, which you can start from scratch or use the code from the tutorials as a basis. 
