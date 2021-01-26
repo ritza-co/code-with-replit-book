@@ -95,3 +95,7 @@ Build a machine-learning based text classifier. We skip the maths but show how y
 
 #### Quicksort tutorial: Python implementation with line by line explanation
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.
+
+#### Steganography with Python and Repl.it
+
+Share secret messages with your friends by hiding them inside images with steganography, Python and Repl.it.
