@@ -20,3 +20,4 @@
 19-introduction-to-machine-learning-with-python-and-repl-it.md
 20-quicksort-tutorial-python-implementation-with-line-by-line-explanation.md
 21-steganography.md
+22-2d-platform-game.md

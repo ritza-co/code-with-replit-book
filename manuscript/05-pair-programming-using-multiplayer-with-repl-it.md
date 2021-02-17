@@ -73,9 +73,7 @@ ax.set(xlabel="GDP per capita", ylabel="Life expectancy")
 
 ## Make it your own
 
-If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
-
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-05-multiplayer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from [https://repl.it/@GarethDwyer1/cwr-05-multiplayer](https://repl.it/@GarethDwyer1/cwr-05-multiplayer).
 
 ## Where next?
 

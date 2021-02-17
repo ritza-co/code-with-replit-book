@@ -84,7 +84,7 @@ For this tutorial, it's important that you do the steps yourself so that everyth
 
 Visit [https://cwr-06-github--garethdwyer1.repl.co/Gareth](https://cwr-06-github--garethdwyer1.repl.co/Gareth) to see it in action (replace the last part of the URL with your own name to receive a personalised greeting). 
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-06-github?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+You can for our repl from [https://repl.it/@GarethDwyer1/cwr-06-github](https://repl.it/@GarethDwyer1/cwr-06-github)
 
 Can you figure out how it works?
 

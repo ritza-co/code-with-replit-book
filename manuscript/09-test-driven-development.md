@@ -226,7 +226,7 @@ Because you're using the `main.py` file now, you can also invoke `pytest` direct
 
 We've written a name splitter that can handle some names more complicated than just "John Smith". It's not perfect though: for example, if you put in a name with two consecutive spaces it will crash our program. You could fork the project and fix this by first writing a test with consecutive spaces and then modifying the code to handle this (and any other edge cases you can think of).
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/namesplitter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+You can find the name splitter repl at [https://repl.it/@GarethDwyer1/namesplitter](https://repl.it/@GarethDwyer1/namesplitter)
 
 ## Where next
 

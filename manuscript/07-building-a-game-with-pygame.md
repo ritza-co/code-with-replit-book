@@ -294,9 +294,7 @@ Now the game is to see how many balls you can juggle with. If it's too easy, mod
 
 ## Make it your own
 
-If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
-
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-07-juggling-with-pygame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from [https://repl.it/@GarethDwyer1/cwr-07-juggling-with-pygame](https://repl.it/@GarethDwyer1/cwr-07-juggling-with-pygame).
 
 ## Where next?
 

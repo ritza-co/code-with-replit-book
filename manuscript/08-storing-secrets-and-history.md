@@ -107,7 +107,7 @@ Visit your WeatherStack account and press the `reset` button to get your new API
 
 You can make a copy of the new repl below. If you fork it, the `.env` file will be missing, so you'll need to create it and add your WeatherStack API key before it will run.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-08-secrets-env?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Fork this repl from [https://repl.it/@GarethDwyer1/cwr-08-secrets-env](https://repl.it/@GarethDwyer1/cwr-08-secrets-env)
 
 ## Where next?
 

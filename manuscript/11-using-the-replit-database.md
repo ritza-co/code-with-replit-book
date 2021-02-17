@@ -418,9 +418,7 @@ It may be a bit inconvenient to type out the whole name of a contact that you wa
 
 ## Make it your own
 
-If you've followed along, you'll have your own version of the repl to extend. Otherwise start from ours below.
-
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-11-phonebook?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+If you've followed along, you'll have your own version of the repl to extend. Otherwise start from ours at [https://repl.it/@GarethDwyer1/cwr-11-phonebook](https://repl.it/@GarethDwyer1/cwr-11-phonebook).
 
 ## Where next
 

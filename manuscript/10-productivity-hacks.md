@@ -138,9 +138,7 @@ If you've gotten used to either, you can emulate the experience in Repl.it by sw
 
 ## Make it your own
 
-If you want to keep hacking on the PyGame project using your new keyboard prowess, you can continue from where we left off below.
-
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-10-productivity?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+If you want to keep hacking on the PyGame project using your new keyboard prowess, you can continue from where we left off at [https://repl.it/@GarethDwyer1/cwr-10-productivity](https://repl.it/@GarethDwyer1/cwr-10-productivity).
 
 ## Where next?
 
