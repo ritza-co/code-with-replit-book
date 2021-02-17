@@ -90,7 +90,7 @@ Build a django web application and host it with Repl.it. You'll use geolocation 
 #### Building a CRM app with NodeJS, Repl.it, and MongoDB
 Another web application, but using NodeJS instead of Django. This is a different application where you'll build a basic app to manage customer information.
 
-#### Introduction to Machine Learning with Python and repl.it
+#### Introduction to Machine Learning with Python and Repl.it
 Build a machine-learning based text classifier. We skip the maths but show how you can use machine learning libraries to implement useful solutions without in-depth theoretical knoweldge.
 
 #### Quicksort tutorial: Python implementation with line by line explanation
@@ -99,3 +99,7 @@ Whether you're applying for jobs or just like algorithms, it's useful to underst
 #### Steganography with Python and Repl.it
 
 Share secret messages with your friends by hiding them inside images with steganography, Python and Repl.it.
+
+#### 2D platform game with PyGame and Repl.it
+
+Build a fun 2D platform game while learning all about Python game development. It's is easily expandible with endless possibilities so let your imagination run wild!
