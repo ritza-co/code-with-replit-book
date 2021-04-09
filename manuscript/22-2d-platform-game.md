@@ -682,8 +682,6 @@ If you'd like to continue working on this game, you can find a large number of m
 
 You can find our game repl and fork it [here](https://repl.it/@ritza/2D-platform-game).
 
----
+## Next Tutorial
 
-# Closing note
-
-We have now come to the end of the series of tutorials. You have learnt the basics of the Repl.it IDE, worked with more advanced features and gone through a number of practical projects. This doesn't mean the end of fun projects, for you should now be equipped to tackle your own projects, which you can start from scratch or use the code from the tutorials as a basis. 
+Up next, we'll learn a simple and flexible implementation of a static site generator. The tutorial will walk you through advanced file handling and by the end of it you'll have a fully functional SSG that you can use as is or customise to add your desired functionality. 
