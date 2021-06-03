@@ -848,3 +848,7 @@ We've created a flexible SSG capable of generating many different types of HTML 
 - A way to mark items as drafts, so they won't be included when the site is compiled.
 - Navigation features like next and previous item links.
 - Useful error messages for malformed directory structures and configuration files.
+
+## Next Tutorial
+
+In the next tutorial we take a look at how to build a personal stock market dashboard app to keep track of your portfolio's performance. The application will allow you to record stock purchases and then show you the percentage gain or loss on the stock by making use of web scraping. At the end of it, you should have a good understanding of web scraping using Requests and Beautiful Soup.

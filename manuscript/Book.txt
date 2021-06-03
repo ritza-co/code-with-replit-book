@@ -22,4 +22,5 @@
 21-steganography.md
 22-2d-platform-game.md
 23-create-a-static-site-generator.md
+24-stock-market-dashboard.md
 closing-note.md
